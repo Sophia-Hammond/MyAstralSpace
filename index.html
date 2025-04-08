@@ -15,8 +15,8 @@
 
 <select id="videoSelector" onchange="changeVideo()">
   <option value="">🌌 Stars</option>
-  <option value="">🌙 Moon</option>
-  <option value="galaxy">🪐 Galaxy</option>
+  <option >🌙 Moon</option>
+  <option value="">🪐 Galaxy</option>
   <option value="clouds">☁️ Clouds</option>
   <option value="waves">🌊 Waves</option>
   <option value="desert">🏜️ Desert</option>
@@ -24,12 +24,16 @@
 </select>
 
     <h1> My Astral Space</h1>
-    <p> hello this is where i will write somthing cool about having your own astral space to keep all your thoughts and load them out your head !</p>
+    <p> hello this is where i will write somthing cool about having 
+        your own astral space to keep all your thoughts and load them out your head !</p>
     <textarea id="noteInput" placeholder="Write your thoughts..."></textarea>
   <br>
   <button onclick="addNote()">Add Note</button>
   <button onclick="deleteAll()">Delete All</button>
   <div id="notesContainer"></div>
+
+  <div id="noteBoard"></div>
+
 
   <script>
     function changeVideo() {
@@ -80,6 +84,44 @@ window.onload = () => {
     }
 
     fetchNotes();
+
+    function addNoteToBoard(text) {
+  const note = document.createElement('div');
+  note.classList.add('note');
+  note.innerText = text;
+
+  const board = document.getElementById('noteBoard');
+
+  // Random position within board dimensions
+  const maxX = window.innerWidth - 220; // 200 width + padding
+  const maxY = window.innerHeight - 120;
+
+  const x = Math.floor(Math.random() * maxX);
+  const y = Math.floor(Math.random() * maxY);
+
+  note.style.left = `${x}px`;
+  note.style.top = `${y}px`;
+
+  board.appendChild(note);
+}
+
+document.getElementById('noteForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const input = document.getElementById('noteInput');
+  const text = input.value.trim();
+  if (!text) return;
+
+  const response = await fetch('/api/notes', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ text }),
+  });
+
+  const newNote = await response.json();
+  addNoteToBoard(newNote.text); // ← Add to visual board
+  input.value = '';
+});
+
  
  </script>
 

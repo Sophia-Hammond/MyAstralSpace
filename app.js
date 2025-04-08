@@ -44,5 +44,5 @@ app.delete('/api/notes', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🧠 Astral Space running at http://localhost:${PORT}`);
+  console.log(`Astral Space running at http://localhost:${PORT}`);
 });
