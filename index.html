@@ -6,10 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MyAstralSpace</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="app" href="app.js">
 
 </head>
 <body>
-    <h1> MyAstralSpace</h1>
+
+    <video id="bgVideo" autoplay muted loop playsinline></video>
+
+<select id="videoSelector" onchange="changeVideo()">
+  <option value="">🌌 Stars</option>
+  <option value="">🌙 Moon</option>
+  <option value="galaxy">🪐 Galaxy</option>
+  <option value="clouds">☁️ Clouds</option>
+  <option value="waves">🌊 Waves</option>
+  <option value="desert">🏜️ Desert</option>
+  <option value="sunrise">🌄 Sunrise</option>
+</select>
+
+    <h1> My Astral Space</h1>
+    <p> hello this is where i will write somthing cool about having your own astral space to keep all your thoughts and load them out your head !</p>
     <textarea id="noteInput" placeholder="Write your thoughts..."></textarea>
   <br>
   <button onclick="addNote()">Add Note</button>
@@ -17,6 +32,21 @@
   <div id="notesContainer"></div>
 
   <script>
+    function changeVideo() {
+  const video = document.getElementById('bgVideo');
+  const selector = document.getElementById('videoSelector');
+  const selected = selector.value;
+
+  video.src = `videos/${selected}.mp4`;
+  video.load();
+  video.play();
+}
+
+// Set default video on load
+window.onload = () => {
+  document.getElementById('bgVideo').src = 'videos/WomanAstralBackground.mp4';
+};
+
     async function fetchNotes() {
       const res = await fetch('/api/notes');
       const notes = await res.json();
