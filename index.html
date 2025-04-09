@@ -1,131 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MyAstralSpace</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="app" href="app.js">
-
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <video id="bgVideo" autoplay muted loop playsinline>
+    <source src="videos/stars.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-    <video id="bgVideo" autoplay muted loop playsinline></video>
+  <select id="videoSelector" onchange="changeVideo()">
+    <option value="StarBackground.mp4">✨ Stars</option>
+    <option value="FullMoonBackground.mp4">🌙 Moon</option>
+    <option value="GeometyBackground.mp4">🪐 Galaxy</option>
+    <option value="WomanAstralBackground.mp4">☁️ Clouds</option>
+    <option value="waves.mp4">🌊 Waves</option>
+    <option value="desert.mp4">🏜️ Desert</option>
+    <option value="sunrise.mp4">🌄 Sunrise</option>
+  </select>
 
-<select id="videoSelector" onchange="changeVideo()">
-  <option value="">🌌 Stars</option>
-  <option >🌙 Moon</option>
-  <option value="">🪐 Galaxy</option>
-  <option value="clouds">☁️ Clouds</option>
-  <option value="waves">🌊 Waves</option>
-  <option value="desert">🏜️ Desert</option>
-  <option value="sunrise">🌄 Sunrise</option>
-</select>
-
-    <h1> My Astral Space</h1>
-    <p> hello this is where i will write somthing cool about having 
-        your own astral space to keep all your thoughts and load them out your head !</p>
-    <textarea id="noteInput" placeholder="Write your thoughts..."></textarea>
-  <br>
-  <button onclick="addNote()">Add Note</button>
-  <button onclick="deleteAll()">Delete All</button>
-  <div id="notesContainer"></div>
+  <form id="noteForm">
+    <input type="text" id="noteInput" placeholder="Type your thought..." required />
+    <button type="submit">Add Note</button>
+  </form>
 
   <div id="noteBoard"></div>
 
-
   <script>
     function changeVideo() {
-  const video = document.getElementById('bgVideo');
-  const selector = document.getElementById('videoSelector');
-  const selected = selector.value;
+      const video = document.getElementById('bgVideo');
+      const selector = document.getElementById('videoSelector');
+      const source = video.querySelector('source');
 
-  video.src = `videos/${selected}.mp4`;
-  video.load();
-  video.play();
-}
-
-// Set default video on load
-window.onload = () => {
-  document.getElementById('bgVideo').src = 'videos/WomanAstralBackground.mp4';
-};
-
-    async function fetchNotes() {
-      const res = await fetch('/api/notes');
-      const notes = await res.json();
-      const container = document.getElementById('notesContainer');
-      container.innerHTML = '';
-      notes.reverse().forEach(note => {
-        const div = document.createElement('div');
-        div.className = 'note';
-        div.innerHTML = `<div>${note.text}</div><div class="timestamp">${note.timestamp}</div>`;
-        container.appendChild(div);
-      });
+      source.src = `videos/${selector.value}`;
+      video.load();
+      video.play();
     }
 
-    async function addNote() {
-      const text = document.getElementById('noteInput').value;
-      if (!text) return alert('Write something!');
-      await fetch('/api/notes', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text })
-      });
-      document.getElementById('noteInput').value = '';
-      fetchNotes();
-    }
-
-    async function deleteAll() {
-      if (confirm('Are you sure you want to delete all notes?')) {
-        await fetch('/api/notes', { method: 'DELETE' });
-        fetchNotes();
-      }
-    }
-
-    fetchNotes();
-
-    function addNoteToBoard(text) {
-  const note = document.createElement('div');
-  note.classList.add('note');
-  note.innerText = text;
-
-  const board = document.getElementById('noteBoard');
-
-  // Random position within board dimensions
-  const maxX = window.innerWidth - 220; // 200 width + padding
-  const maxY = window.innerHeight - 120;
-
-  const x = Math.floor(Math.random() * maxX);
-  const y = Math.floor(Math.random() * maxY);
-
-  note.style.left = `${x}px`;
-  note.style.top = `${y}px`;
-
-  board.appendChild(note);
-}
-
-document.getElementById('noteForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const input = document.getElementById('noteInput');
-  const text = input.value.trim();
-  if (!text) return;
-
-  const response = await fetch('/api/notes', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ text }),
-  });
-
-  const newNote = await response.json();
-  addNoteToBoard(newNote.text); // ← Add to visual board
-  input.value = '';
-});
-
- 
- </script>
-
-
+    window.onload = () => {
+      document.getElementById('bgVideo').querySelector('source').src = 'videos/stars.mp4';
+    };
+  </script>
+  <script src="scripts.js" defer></script>
 </body>
 </html>
- 
