@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyAstralSpace</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <!-- Background Video -->
+  <video id="bgVideo" autoplay muted loop playsinline>
+    <source src="/videos/stars.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="top-bar">
+      <a href="/signup">Sign Up</a>
+      <a href="/login">Sign In</a>
+      
+      <select id="videoSelector">
+        <option value="stars">✨ Stars</option>
+        <option value="moon">🌙 Moon</option>
+        <option value="galaxy">🪐 Galaxy</option>
+      </select>
+
+      <button id="randomSpaceBtn">Generate Random Space</button>
+    </nav>
+  </header>
+
+  <!-- Note Form -->
+  <form id="noteForm">
+    <input type="text" id="noteInput" placeholder="Type your thought..." required />
+    <button type="submit">Add Thought</button>
+  </form>
+
+  <!-- Note Board -->
+  <div id="noteBoard"></div>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
