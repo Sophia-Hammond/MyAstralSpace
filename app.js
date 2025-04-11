@@ -5,6 +5,9 @@ const session = require('express-session'); // allows users to stay logged in ac
 const MongoStore = require('connect-mongoose');
 const dotenv = require('dotenv'); // loads variable from .env
 const path = require('path');
+const authRoutes = require("./routes/auth");
+app.use("/auth", authRoutes);
+
 
 dotenv.config();
 
