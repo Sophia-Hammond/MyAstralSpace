@@ -1,0 +1,104 @@
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Make sure body takes full screen */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  /* Background video styling */
+  #bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent */
+    color: white;
+    z-index: 5;
+  }
+  
+  /* Dropdown and buttons */
+  .navbar select,
+  .navbar button {
+    padding: 0.5rem 1rem;
+    margin-left: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Thought input form */
+  #noteForm {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 10;
+  }
+  
+  #noteInput {
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    width: 300px;
+  }
+  
+  #noteForm button {
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    background-color: #ffffff88;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Thought note floating style */
+  .note {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 1rem;
+    max-width: 200px;
+    color: #333;
+    animation: floatIn 1s ease-out forwards;
+    z-index: 5;
+  }
+  
+  /* Floating animation */
+  @keyframes floatIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
