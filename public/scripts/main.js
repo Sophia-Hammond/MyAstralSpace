@@ -65,3 +65,52 @@ noteForm.addEventListener("submit", (e) => {
     noteInput.value = "";
 
 });
+
+// Function to submit the thought
+async function submitThought() {
+    const noteText = document.getElementById("noteInput").value;
+    const boardBackground = document.getElementById("bgVideo").src; // Get the selected background
+  
+    // Ensure the user is logged in
+    const response = await fetch("/auth/status", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  
+    const result = await response.json();
+    if (!result.loggedIn) {
+      alert("You must be logged in to save your board.");
+      return;
+    }
+  
+    // Save thought to the page
+    const note = document.createElement("div");
+    note.classList.add("note");
+    note.textContent = noteText;
+    document.body.appendChild(note);
+  
+    // Add random position (will float across the screen)
+    note.style.position = "absolute";
+    note.style.left = `${Math.random() * window.innerWidth}px`;
+    note.style.top = `${Math.random() * window.innerHeight}px`;
+  
+    // Save thought to the backend (to the user’s thought board)
+    const thoughtData = {
+      thoughts: [{ text: noteText, position: { x: note.offsetLeft, y: note.offsetTop } }],
+      background: boardBackground,
+    };
+  
+    await fetch("/boards/create", {
+      method: "POST",
+      body: JSON.stringify(thoughtData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  
+    // Clear input field
+    document.getElementById("noteInput").value = "";
+  }
+  

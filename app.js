@@ -6,8 +6,7 @@ const MongoStore = require('connect-mongoose');
 const dotenv = require('dotenv'); // loads variable from .env
 const path = require('path');
 const authRoutes = require("./routes/auth");
-app.use("/auth", authRoutes);
-
+const boardRoutes = require("./routes/boards");
 
 dotenv.config();
 
@@ -37,6 +36,12 @@ app.use(session({
 
 // routes
 app.use('/', require('./routes/main'));
+app.use("/auth", authRoutes); // authentication route
+app.use("/boards", boardRoutes); // boards routes
+// Home route
+app.get("/", (req, res) => {
+    res.send("Welcome to MyAstralSpace");
+  });
 
 // start server 
 const PORT = process.env.PORT || 3000;
