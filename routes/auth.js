@@ -85,4 +85,16 @@ router.post("/logout", (req, res) => {
   res.status(200).json({ message: "Logged out." });
 });
 
+app.get('/logout', (req, res) => {
+    req.session.destroy(err => {
+      if (err) {
+        console.error("Logout error:", err);
+        return res.redirect('/dashboard');
+      }
+      res.clearCookie('connect.sid'); // Clear session cookie
+      res.redirect('/login');
+    });
+  });
+  
+
 module.exports = router;
