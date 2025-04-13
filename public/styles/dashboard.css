@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: radial-gradient(ellipse at center, #1a1a2e 0%, #000000 100%);
+    
     color: white;
     margin: 0;
     padding: 0;
@@ -28,6 +28,7 @@ body {
   main {
     padding: 2rem;
     text-align: center;
+    
   }
   
   #noteBoard {
@@ -36,5 +37,39 @@ body {
     border: 2px dashed rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     padding: 2rem;
+
   }
+
+  .thought-note {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid #ffd369;
+    color: #ffd369;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    max-width: 250px;
+    box-shadow: 0 0 10px #ffd369;
+    transition: all 0.5s ease-in-out;
+  
+  }
+ 
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+}
+
+.content {
+  position: relative;
+  z-index: 1; 
+}
+
+
+
+
   

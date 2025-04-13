@@ -7,6 +7,7 @@ const dotenv = require('dotenv'); // loads variable from .env
 const path = require('path');
 const authRoutes = require("./routes/auth");
 const boardRoutes = require("./routes/boards");
+const isAuthenticated = require('./middleware/auth');
 
 dotenv.config();
 
@@ -42,6 +43,13 @@ app.use("/boards", boardRoutes); // boards routes
 app.get("/", (req, res) => {
     res.send("Welcome to MyAstralSpace");
   });
+
+  //making dashboard visible for logged-in users
+app.get('/dashboard' , isAuthenticated, async (req, res) => {
+    const user = await User.findById(req.session.userID); 
+    res.render('dashboard', { user });
+});
+
 
 // start server 
 const PORT = process.env.PORT || 3000;
