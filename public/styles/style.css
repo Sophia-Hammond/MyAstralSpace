@@ -49,6 +49,54 @@
     color: white;
     cursor: pointer;
   }
+
+  .sign-in-button {
+    padding: 0.5rem 1rem;
+    border: 2px solid #0ce2ff;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #19f189;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #10e2a3;
+  }
+  
+  .sign-in-button:hover {
+    background-color: #1b0a8d;
+    color: #11d3ed;
+    box-shadow: 0 0 20px #0dfafe, 0 0 40px #1efbc4;
+    cursor: pointer;
+  }
+
+  .sign-up-button {
+    padding: 0.5rem 1rem;
+    border: 2px solid #0ce2ff;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #19f189;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #10e2a3;
+  }
+  
+  .sign-up-button:hover {
+    background-color: #1b0a8d;
+    color: #11d3ed;
+    box-shadow: 0 0 20px #0dfafe, 0 0 40px #1efbc4;
+    cursor: pointer;
+  }
+  
+  #noteBoard {
+    margin-top: 2rem;
+    min-height: 300px;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative;
+  }
+
   
   /* Thought input form */
   #noteForm {
