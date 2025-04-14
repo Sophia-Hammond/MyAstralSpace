@@ -1,59 +1,13 @@
-body {
-    font-family: 'Segoe UI', sans-serif;
-    
-    color: white;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-  
-  nav a {
-    color: #ffd369;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  main {
-    padding: 2rem;
-    text-align: center;
-    
-  }
-  
-  #noteBoard {
-    margin-top: 2rem;
-    min-height: 300px;
-    border: 2px dashed rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 2rem;
+/* Make sure the body and html fill the screen */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
 
-  }
-
-  .thought-note {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.08);
-    border: 1px solid #ffd369;
-    color: #ffd369;
-    padding: 1rem;
-    border-radius: 10px;
-    font-size: 1rem;
-    max-width: 250px;
-    box-shadow: 0 0 10px #ffd369;
-    transition: all 0.5s ease-in-out;
-  
-  }
- 
+/* Video background */
 #bg-video {
   position: fixed;
   top: 0;
@@ -61,15 +15,85 @@ body {
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
-  z-index: -1; 
+  z-index: -1;
 }
 
+/* Main content wrapper */
 .content {
   position: relative;
-  z-index: 1; 
+  z-index: 1;
+  padding: 2rem;
+}
+
+/* Optional: Semi-transparent overlay for better readability */
+main {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav a {
+  color: #074c80;
+  text-decoration: none;
+  font-weight: bold;
+ 
+}
+
+.logout-button {
+  padding: 0.5rem 1rem;
+  border: 2px solid #ffd369;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffd369;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #ffd369;
+}
+
+.logout-button:hover {
+  background-color: #ffd369;
+  color: #1a1a2e;
+  box-shadow: 0 0 20px #ffd369, 0 0 40px #ffd369;
+  cursor: pointer;
 }
 
 
+#noteBoard {
+  margin-top: 2rem;
+  min-height: 300px;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 2rem;
+  position: relative;
+}
 
-
-  
+.thought-note {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid #ffd369;
+  color: #ffd369;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  max-width: 250px;
+  box-shadow: 0 0 10px #ffd369;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
