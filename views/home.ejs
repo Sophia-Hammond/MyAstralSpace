@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MyAstralSpace</title>
-  <link rel="stylesheet" href="/styles/style.css" />
+  <title>Your Astral Space</title>
+  <link rel="stylesheet" href="/public/styles/style.css" />
 </head>
 <body>
-  <!-- Background Video -->
-  <video id="bgVideo" autoplay muted loop playsinline>
-    <source src="/videos/stars.mp4" type="video/mp4" />
+  
+    <!-- Video behind everything -->
+  <video autoplay muted loop id="bg-video">
+    <source src="/videos/MagicallyRelaxing/206257_small.mp4" type="video/mp4">
+    Your browser does not support the video tag.
   </video>
 
-  <!-- Navigation Bar -->
-  <header>
-    <nav class="top-bar">
-      <a href="/signup">Sign Up</a>
-      <a href="/login">Sign In</a>
-      
-      <select id="videoSelector">
+  <!-- Content wrapper on top of video -->
+  <div class="content">
+    <header>
+      <h1>Welcome,</h1>
+      <nav>
+        <a href="/Sign-in" class="logout-button">Logout</a>
+        <a href="/Sign-up" class="logout-button">Logout</a>
+        <select id="videoSelector">
         <option value="stars">✨ Stars</option>
         <option value="moon">🌙 Moon</option>
         <option value="galaxy">🪐 Galaxy</option>
@@ -29,14 +32,21 @@
   </header>
 
   <!-- Note Form -->
-  <form id="noteForm">
-    <input type="text" id="noteInput" placeholder="Type your thought..." required />
-    <button type="submit">Add Thought</button>
-  </form>
+  <main>
+    <h2>This is your personal Astral Space.</h2>
+    <p>Start unloading your thoughts below...</p>
 
-  <!-- Note Board -->
-  <div id="noteBoard"></div>
+    <form id="noteForm">
+      <input type="text" id="noteInput" placeholder="Type your thought..." required />
+      <button type="submit">Add Thought</button>
+    </form>
 
-  <script src="/js/main.js" defer></script>
+    <div id="noteBoard"></div>
+
+    <audio id="submitSound" src="/sounds/pop.mp3" preload="auto"></audio>
+    <script src="/scripts/floatingNotes.js" defer></script>
+  </main>
+</div>
+
 </body>
 </html>

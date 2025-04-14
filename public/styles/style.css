@@ -1,29 +1,28 @@
-/* Reset default spacing */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Make sure body takes full screen */
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
-    background-color: black;
-  }
-  
-  /* Background video styling */
-  #bgVideo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    object-fit: cover;
-  }
+      body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: rgb(255, 255, 255);
+    }
+    
+    /* Video background */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    
+    /* Main content wrapper */
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+    }
   
   /* Navbar */
   .navbar {
@@ -36,7 +35,7 @@
     align-items: center;
     background: rgba(0, 0, 0, 0.5); /* semi-transparent */
     color: white;
-    z-index: 5;
+   
   }
   
   /* Dropdown and buttons */
@@ -58,7 +57,7 @@
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    z-index: 10;
+   
   }
   
   #noteInput {
@@ -73,7 +72,7 @@
     border: none;
     border-radius: 0 8px 8px 0;
     background-color: #ffffff88;
-    color: black;
+    color: rgb(13, 0, 0);
     font-weight: bold;
     cursor: pointer;
   }
@@ -87,7 +86,7 @@
     max-width: 200px;
     color: #333;
     animation: floatIn 1s ease-out forwards;
-    z-index: 5;
+  
   }
   
   /* Floating animation */
