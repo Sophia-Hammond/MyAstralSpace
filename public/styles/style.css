@@ -1,153 +1,139 @@
-      body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: rgb(255, 255, 255);
-    }
-    
-    /* Video background */
-    #bg-video {
-      position: fixed;
-      top: 0;
-      left: 0%;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-    
-    /* Main content wrapper */
-    .content {
-      position: relative;
-      z-index: 1;
-      padding: 2rem;
-      padding-top: 80px;
-    }
-  
-    .navbar {
-      position: fixed; 
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      padding: 0 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: black; 
-      z-index: 10; /* stay above video background */
-    }
-    
-  
-  /* Dropdown and buttons */
-  .navbar select,
-  .navbar button {
-    padding: 0.5rem 1rem;
-    margin-left: 10px;
-    border: none;
-    border-radius: 6px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    cursor: pointer;
-  }
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: rgb(255, 255, 255);
+}
 
-  .sign-in-button {
-    padding: 0.5rem 1rem;
-    border: 2px solid #0ce2ff;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #19f189;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px #10e2a3;
-  }
-  
-  .sign-in-button:hover {
-    background-color: #1b0a8d;
-    color: #11d3ed;
-    box-shadow: 0 0 20px #0dfafe, 0 0 40px #1efbc4;
-    cursor: pointer;
-  }
+/* Video background */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
 
-  .sign-up-button {
-    padding: 0.5rem 1rem;
-    border: 2px solid #0ce2ff;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #19f189;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px #10e2a3;
-  }
-  
-  .sign-up-button:hover {
-    background-color: #1b0a8d;
-    color: #11d3ed;
-    box-shadow: 0 0 20px #0dfafe, 0 0 40px #1efbc4;
-    cursor: pointer;
-  }
-  
-  #noteBoard {
-    margin-top: 2rem;
-    min-height: 300px;
-    border: 2px dashed rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 2rem;
-    position: relative;
-  }
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.4);
+}
+
+/* Navbar items */
+.navbar select,
+.navbar button,
+.navbar a {
+  padding: 15px 1rem;
+  margin-left: 10px;
+  border: none;
+  border-radius:15px;
+  background-color: rgba(18, 239, 246, 0.2);
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Glowing buttons */
+.sign-in-button,
+.sign-up-button,
+.logout-button {
+  padding: 0.5rem 1rem;
+  border: 2px solid #0ce2ff;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #19f1ed;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #0eb6fe;
+  margin-right: 50px;
+}
+
+.sign-in-button:hover,
+.sign-up-button:hover,
+.logout-button:hover {
+  background-color: #0bcadb;
+  color: #000000;
+  box-shadow: 0 0 20px #0dfafe, 0 0 40px #1efbc4;
+}
+
+/* Main content wrapper */
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  padding-top: 100px;
+}
+
+#noteBoard {
+  margin-top: 2rem;
+  min-height: 300px;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Thought input form */
+#noteForm {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+#noteInput {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  width: 300px;
+}
+
+#noteForm button {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  background-color: #3fb2dc88;
+  color: rgb(13, 0, 0);
+  font-weight: bold;
+  cursor: pointer;
+}
 
 
-  /* Thought input form */
-  #noteForm {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-   
+
+/* Thought note floating style */
+.note {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 200px;
+  color: #333;
+  animation: floatIn 1s ease-out forwards;
+}
+
+/* Floating animation */
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.5);
   }
-  
-  #noteInput {
-    padding: 0.7rem 1rem;
-    border: none;
-    border-radius: 8px 0 0 8px;
-    width: 300px;
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
-  
-  #noteForm button {
-    padding: 0.7rem 1rem;
-    border: none;
-    border-radius: 0 8px 8px 0;
-    background-color: #ffffff88;
-    color: rgb(13, 0, 0);
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  /* Thought note floating style */
-  .note {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 12px;
-    padding: 1rem;
-    max-width: 200px;
-    color: #333;
-    animation: floatIn 1s ease-out forwards;
-  
-  }
-  
-  /* Floating animation */
-  @keyframes floatIn {
-    0% {
-      opacity: 0;
-      transform: translateY(50px) scale(0.5);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-  }
-  
+}

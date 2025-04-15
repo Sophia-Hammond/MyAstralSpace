@@ -1,10 +1,10 @@
-/* Make sure the body and html fill the screen */
-html, body {
+
+  body {
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 /* Video background */
@@ -25,7 +25,7 @@ html, body {
   padding: 2rem;
 }
 
-/* Optional: Semi-transparent overlay for better readability */
+
 main {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 2rem;
@@ -49,7 +49,7 @@ header h1 {
 }
 
 nav a {
-  color: #074c80;
+  color: #254259;
   text-decoration: none;
   font-weight: bold;
  
@@ -57,20 +57,20 @@ nav a {
 
 .logout-button {
   padding: 0.5rem 1rem;
-  border: 2px solid #ffd369;
+  border: 2px solid #0ce2ff;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.1);
-  color: #ffd369;
+  color: #19f189;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px #ffd369;
+  box-shadow: 0 0 10px #10e2a3;
 }
 
 .logout-button:hover {
-  background-color: #ffd369;
-  color: #1a1a2e;
-  box-shadow: 0 0 20px #ffd369, 0 0 40px #ffd369;
+  background-color: #1b0a8d;
+  color: #11d3ed;
+  box-shadow: 0 0 20px #0dfafe, 0 0 40px #1efbc4;
   cursor: pointer;
 }
 
