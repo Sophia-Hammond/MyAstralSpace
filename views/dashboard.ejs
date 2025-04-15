@@ -7,24 +7,25 @@
 </head>
 <body>
 
-  <!-- ✅ Video behind everything -->
+  <!-- Video behind everything -->
   <video autoplay muted loop id="bg-video">
     <source src="/videos/MagicallyRelaxing/jellyfish.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-  <!-- ✅ Content wrapper on top of video -->
+  <!-- Content wrapper on top of video -->
   <div class="content">
     <header>
       <h1>🌌 Welcome, <%= user.username %>!</h1>
       <nav>
-        <a href="/logout">Logout</a>
+        <a href="/logout" class="logout-button">Logout</a>
+
       </nav>
     </header>
 
     <main>
-      <h2>This is your personal astral space.</h2>
-      <p>Start dumping your thoughts below...</p>
+      <h2>This is your personal Astral Space.</h2>
+      <p>Start unloading your thoughts below...</p>
 
       <form id="noteForm">
         <input type="text" id="noteInput" placeholder="Type your thought..." required />

@@ -2,51 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Your Astral Space</title>
   <link rel="stylesheet" href="/public/styles/style.css" />
 </head>
 <body>
-  
-    <!-- Video behind everything -->
+
+  <!-- Video behind everything -->
   <video autoplay muted loop id="bg-video">
     <source src="/videos/MagicallyRelaxing/206257_small.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-  <!-- Content wrapper on top of video -->
-  <div class="content">
-    <header>
-      <h1>Welcome,</h1>
-      <nav>
-        <a href="/Sign-in" class="Sign-in-button">Logout</a>
-        <a href="/Sign-up" class="Sign-up-button">Logout</a>
-        <select id="videoSelector">
+  <!-- Glowing Navbar -->
+  <nav class="navbar">
+    <div>
+      <select id="videoSelector">
         <option value="stars">✨ Stars</option>
         <option value="moon">🌙 Moon</option>
         <option value="galaxy">🪐 Galaxy</option>
       </select>
-
       <button id="randomSpaceBtn">Generate Random Space</button>
-    </nav>
-  </header>
+    </div>
+    <div>
+      <a href="/login" class="sign-in-button">Sign In</a>
+      <a href="/register" class="sign-up-button">Sign Up</a>
 
-  <!-- Note Form -->
-  <main>
-    <h2>This is your personal Astral Space.</h2>
-    <p>Start unloading your thoughts below...</p>
+    </div>
+  </nav>
 
-    <form id="noteForm">
-      <input type="text" id="noteInput" placeholder="Type your thought..." required />
-      <button type="submit">Add Thought</button>
-    </form>
+  <!-- Main Content -->
+  <div class="content">
+    <main>
+      <h1>Welcome,</h1>
+      <h2>This is your personal Astral Space.</h2>
+      <p>Start unloading your thoughts below...</p>
 
-    <div id="noteBoard"></div>
+      <!-- Note Form -->
+      <form id="noteForm">
+        <input type="text" id="noteInput" placeholder="Type your thought..." required />
+        <button type="submit">Add Thought</button>
+      </form>
 
-    <audio id="submitSound" src="/sounds/pop.mp3" preload="auto"></audio>
-    <script src="/scripts/floatingNotes.js" defer></script>
-  </main>
-</div>
+      <div id="noteBoard"></div>
+
+      <audio id="submitSound" src="/sounds/pop.mp3" preload="auto"></audio>
+      <script src="/scripts/floatingNotes.js" defer></script>
+    </main>
+  </div>
 
 </body>
 </html>
