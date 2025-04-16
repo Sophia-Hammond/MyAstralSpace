@@ -19,6 +19,12 @@ ManSittingByTheMoon: "manByMoon.mp4",
 CloudySky:"cloudSkyBackground.mp4",
 PeacfullStudy: "peacfulSpace.mp4", 
 HeavenlyWater: "heavenlyWater.mp4",
+MaleAstral: "MaleAstralBackground.mp4",
+HeavenlyWater: "heavenlyWater.mp4",
+StillNight:"Moon&Rocks.mp4",
+Dementional: "5thDementionalBreathing.mp4",
+Simulation: "EthericSimulation",
+
 
 
 
