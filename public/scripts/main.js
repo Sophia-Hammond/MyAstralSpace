@@ -5,23 +5,20 @@ const bgVideo = document.getElementById("bgVideo");
 const videoSelector = document.getElementById("videoSelector");
 const generateButton = document.getElementById("generateRandom");
 
-const videos = {
-    videoname: "Cloud ",
-    videonae: "link to video",
-};
+
 
 
 const videos = {
 Nebula: "StarBackground.mp4",
-"FullMoonBackground.mp4",
-"WomanAstralBackground.mp4",
+FullMoon: "FullMoonBackground.mp4",
+AstralWoman: "WomanAstralBackground.mp4",
 ForestMoon:"forestMoon.mp4",
 Jellyfish: "jellyfish.mp4",
 MushroomWoods:"mushroomWoods.mp4",
 ManSittingByTheMoon: "manByMoon.mp4",
-"cloudSkyBackground.mp4",
-"peacfulSpace.mp4", 
-"heavenlyWater.mp4",
+CloudySky:"cloudSkyBackground.mp4",
+PeacfullStudy: "peacfulSpace.mp4", 
+HeavenlyWater: "heavenlyWater.mp4",
 
 
 
@@ -29,14 +26,14 @@ ManSittingByTheMoon: "manByMoon.mp4",
 
 LofiCity:"lofiCity.mp4",
 LofiLandscape:"lofiLandscape.mp4",
-"lofiGold.mp4",
+LofiGold:"lofiGold.mp4",
 LofiStudy:"lofiStudy.mp4",
-"lofiMountinGirl.mp4",
+LofiMountinGirl: "lofiMountinGirl.mp4",
 LofiBoy:"lofiBoy.mp4",
 LofiMoonlightStudy:"lofiMoonlightStudy.mp4",
 LofiMountin:"lofiMountin.mp4",
 LofiBedroomChill:"lofiRelaxingBedroom.mp4",
-}
+};
 
 
 // on change dropdown 
