@@ -16,98 +16,32 @@
   <!-- Content wrapper on top of video -->
   <div class="content">
     <header>
-      <h1>🌌 Welcome back! <%= user.username %>!</h1>
+      <h1>Free Wallpaper Download </h1>
     </header>
       <nav class="navbar">
         <div>
-          <select id="videoSelector">
-    
-            <option value="ForestMoon">Forest Moon</option>
-            <option value="jellyfish">Jellyfish</option>
-            <option value="MushroomWoods">Mushroom Woods</option>
-            <option value="ManSittingByTheMoon">Man Sitting By The Moon</option>
-            <option value="CloudySky">Cloudy Sky</option>
-            <option value="HeavenlyWater">Heavenly Water</option>
-            <option value="PeacfullStudy">Peacfull Study</option>
-            <option value="FullMoon">Full Moon</option>
-            <option value="Nebula">Nubula</option>
-            <option value="AstralWoman">Astral Woman</option>
-            <option value="StillNight">Still Night</option>
-            <option value="Dementional">5th Dementional</option>
-            <option value="Simulation"> Etheric Simulation</option>
-    
-            <option value="LofiCity">Lofi City</option>
-            <option value="LofiLandscape">Lofi Landscape</option>
-            <option value="LofiGold">Lofi Gold</option>
-            <option value="LofiBoy">Lofi Boy</option>
-            <option value="LofiMoonlightStudy">Lofi Moonlight Study</option>
-            <option value="LofiMountin">Lofi Mountin</option>
-            <option value="LofiBedroomChill">Lofi Bedroom Chill</option>
-            <option value="LofiMountinGirl">Lofi Girl on Mountin</option>
-    
+          
           </select>
-          <button id="randomSpaceBtn">Generate Random Space</button>
+         
         </div>
         <div>
           <a href="/views/login.ejs" class="sign-in-button">Sign In</a>
           <a href="/views/signup.ejs" class="sign-up-button">Sign Up</a>
-          <a href="/views/wallpapers.ejs" class="wallpaper-button"> Free Wallpaper Download </a>
+          <a href="/views/home.ejs" class="wallpaper-button"> Astral Space</a>
     
         </div>
       </nav>
   
 
     <main>
-      <h2>Choose your Astral Space.</h2>
-      <p>Start unloading your thoughts below...</p>
+      <h2>Free Desktop Wallpaper Download </h2>
+      <p>Make a account and download as many wallpapers you wish for free!</p>
       <br>
-      <a href="/views/savedSpaces.ejs" class="saved-spaces-button">Veiw your Saved Spaces</a>
-
+      
       <br><br>
       <h2>Video Spaces</h2>
 
-      <div class="all-spaces">
-        <div class="Astral-gallery">
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/5thDementionalBreathing.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/StarBackground.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/FullMoonBackgroundVideo.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/WomanAstralBackground.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/forestMoon.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/jellyfish.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/mushroomWoods.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/manByMoon.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/CloudSkyBackground.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/peacfulSpace.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/heavenlywater.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/MaleAstralBodyBackground.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/Moon&Rocks.mp4" alt=" "></div>
-
-
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/EthericSimulation.mp4" alt=" "></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/UniversalPull-2.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/UniversalBeing-2.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/snowyMountin-2.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/MagicallyRelaxing/GoldenClouds-2.mp4" alt="Placeholder"></div>
-
-
-            <div class="grid-item"><video src="/Videos/LofiChill/lofiBoy.mp4" alt=" "></div>
-            <div class="grid-item"><video src="/Videos/LofiChill/lofiCity.mp4" alt="Placeholder"></div>
-            <div class="grid-item"><video src="/Videos/LofiChill/lofiGold.mp4" alt=" "></div>
-                <div class="grid-item"><video src="/Videos/LofiChill/lofiLandscape.mp4" alt="Placeholder"></div>
-                    <div class="grid-item"><video src="/Videos/LofiChill/LofiMoonlightStudy.mp4" alt="Placeholder"></div>
-                    <div class="grid-item"><video src="/Videos/LofiChill/lofiMountin.mp4" alt="Placeholder"></div>
-                    <div class="grid-item"><video src="/Videos/LofiChill/lofiMountinGirl.mp4" alt="Placeholder"></div>
-                    <div class="grid-item"><video src="/Videos/LofiChill/lofiRelaxingBedroom.mp4" alt=" "></div>
-                    <div class="grid-item"><video src="/Videos/LofiChill/lofiStudy.mp4" alt="Placeholder"></div>
-                    <div class="grid-item"><video src="/Videos/LofiChill/BlossomTree-2.mp4" alt=" "></div>
-                    <div class="grid-item"><video src="/Videos/LofiChill/catAtSunrise-2.mp4" alt=" "></div>
-                    <div class="grid-item"><video src="/Videos/LofiChill/GameDen-2.mp4" alt=" "></div>
-                    <div class="grid-item"><video src="/Videos/LofiChill/GirlOnTrain-2.mp4" alt=" "></div>
-            
-                        
-            </div>
-    </div>
-
+      
 
     <h2>Image Spaces</h2>
 
@@ -175,5 +109,24 @@
   
  
   </div>
+
+  <script>
+   
+  document.querySelectorAll('.grid-item').forEach(item => {
+    const img = item.querySelector('img');
+    const src = img.getAttribute('src');
+    
+    const downloadLink = document.createElement('a');
+    downloadLink.href = src;
+    downloadLink.download = '';
+    downloadLink.className = 'download-icon';
+    downloadLink.title = 'Download';
+    downloadLink.textContent = '⬇️';
+    
+    item.appendChild(downloadLink);
+  });
+</script>
+
+  
 </body>
 </html>
