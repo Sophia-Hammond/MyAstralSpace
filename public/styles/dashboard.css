@@ -182,13 +182,19 @@ nav a {
 
 
 #noteBoard {
-  margin-top: 2rem;
-  min-height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  margin: 0; 
   border: 2px dashed rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 2rem;
-  position: relative;
+  box-sizing: border-box; 
+  z-index: 1; 
 }
+
 
 .thought-note {
   position: absolute;
