@@ -152,11 +152,12 @@ nav a {
 }
 
 /* Make sure images cover the whole grid-item */
-.grid-item img {
+.grid-item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+  
 }
 
 /* Floating animation */
