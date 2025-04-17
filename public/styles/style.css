@@ -15,8 +15,17 @@ body {
   min-height: 100%;
   object-fit: cover;
   z-index: -1;
+  
+ 
 }
+ p {
+  font-size: medium;
+  margin-top: 30px;
+  margin-left: 40px;
 
+ 
+
+}
 /* Navbar */
 .navbar {
   position: fixed;
@@ -24,7 +33,7 @@ body {
   left: 0;
   width: 100%;
   height: 60px;
-  padding: 0 2rem;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,6 +41,22 @@ body {
   z-index: 10;
   box-shadow: 0 2px 10px rgba(0, 255, 255, 0.4);
 }
+
+.footer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.4);
+}
+
 
 /* Navbar items */
 .navbar select,
@@ -46,11 +71,24 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
+h2 {
+  font-size: medium;
+  background-color: rgba(14, 22, 63, 0.4);
+  padding: 20px;
+}
+
+h1 {
+  font-size: xx-large;
+  margin-top: 60px;
+  text-align: center;
+}
 
 /* Glowing buttons */
 .sign-in-button,
 .sign-up-button,
-.logout-button {
+.logout-button,
+.randomSpaceBtn, 
+#noteForm button{
   padding: 0.5rem 1rem;
   border: 2px solid #0ce2ff;
   border-radius: 8px;
@@ -64,7 +102,9 @@ body {
 
 .sign-in-button:hover,
 .sign-up-button:hover,
-.logout-button:hover {
+.logout-button:hover,
+.randomSpaceBtn:hover,
+.noteForm button:hover {
   background-color: #0bcadb;
   color: #000000;
   box-shadow: 0 0 20px #0dfafe, 0 0 40px #1efbc4;
@@ -81,10 +121,20 @@ body {
 #noteBoard {
   margin-top: 2rem;
   min-height: 300px;
+  max-width: 1500;
   border: 2px dashed rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 2rem;
   position: relative;
+  align-items: center;
+  
+}
+#board-video {
+  object-fit: cover;
+  opacity: 60%;
+  max-width: 1500px;
+  align-items: center;
+
 }
 
 /* Thought input form */
@@ -94,6 +144,10 @@ body {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  margin-bottom:935px;
+  align-items: center;
+  text-align: center;
+ 
 }
 
 #noteInput {
@@ -107,7 +161,7 @@ body {
   padding: 0.7rem 1rem;
   border: none;
   border-radius: 0 8px 8px 0;
-  background-color: #3fb2dc88;
+  background-color: #6ddbf1;
   color: rgb(13, 0, 0);
   font-weight: bold;
   cursor: pointer;

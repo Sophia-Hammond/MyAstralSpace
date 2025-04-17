@@ -10,7 +10,7 @@
 
   <!-- Video behind everything -->
   <video autoplay muted loop id="bg-video">
-    <source src="/videos/MagicallyRelaxing/Moon&Rocks.mp4" type="video/mp4">
+    <source src="/videos/MagicallyRelaxing/jellyfish.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
@@ -46,18 +46,21 @@
       <button id="randomSpaceBtn">Generate Random Space</button>
     </div>
     <div>
-      <a href="/login" class="sign-in-button">Sign In</a>
-      <a href="/register" class="sign-up-button">Sign Up</a>
-
+        <button id="randomSpaceBtn">Generate Random Space</button>
+      <a href="/views/login.ejs" class="sign-in-button">Sign In</a>
+      <a href="/views/signup.ejs" class="sign-up-button">Sign Up</a>
+      <a href="/views/dashboard.ejs" class="sign-up-button">Your Dashboard</a>
+      <a href="/views/wallpapers.ejs" class="sign-up-button">FREE Downloadable Wallpapers</a>
     </div>
   </nav>
 
   <!-- Main Content -->
   <div class="content">
     <main>
-      <h1>Welcome,</h1>
-      <h2>This is your personal Astral Space.</h2>
-      <p>Start unloading your thoughts below...</p>
+      <h1>Welcome to your Astral Space</h1>
+      <h2>This is your sacred space to clear your mind and let your thoughts flow freely. Below, you’ll find a collection of beautiful, ever-evolving spaces where you can drop as many thoughts as you like — no limits, just clarity. When you create a free account, you can save each Astral Space like a vision board, keeping your ideas organized and always within reach. You’ll also unlock access to even more stunning spaces, laid out in a dreamy collage to explore and scroll through, plus unlimited downloads of incredible desktop wallpapers. So go ahead — add a thought and step into your own cosmic sanctuary.</h2>
+      
+      <p>Start unloading your thoughts..</p>
 
       <!-- Note Form -->
       <form id="noteForm">
@@ -65,12 +68,20 @@
         <button type="submit">Add Thought</button>
       </form>
 
-      <div id="noteBoard"></div>
-
+      <div id="noteBoard">
+        <video autoplay muted loop id="board-video">
+            <source src="/videos/MagicallyRelaxing/5thDementionalBreathing.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> 
+      </div>
+      
       <audio id="submitSound" src="/sounds/pop.mp3" preload="auto"></audio>
       <script src="/scripts/floatingNotes.js" defer></script>
     </main>
   </div>
 
 </body>
+
+
+
 </html>
