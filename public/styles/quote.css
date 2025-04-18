@@ -16,13 +16,26 @@ header, h1 {
     text-align: center;
   }
   
+
+  #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
   header h1 {
     margin: 0;
     font-size: 1.5rem;
     text-align: center;
     font-size: xx-large;
+    margin-top: 70px;
   
   }
+  
 
   /* Navbar */
   .navbar {
@@ -53,12 +66,7 @@ header, h1 {
     cursor: pointer;
     text-decoration: none;
   }
-  p {
-   font-palette: black;
-   font-size:large;
-   background-color: #1a5173 ;
-  padding: 20px;
-  }
+  
   
   /* Glowing buttons */
   .sign-in-button,
@@ -90,6 +98,13 @@ header, h1 {
     font-weight: bold;
    
   }
+  p {
+    margin-bottom: 40px;
+    font-size: medium;
+    background-color: rgba(6, 3, 3, 0.4);
+    padding: 50px;
+    font-size: large;
+  }
   
   .logout-button {
     padding: 0.5rem 1rem;
@@ -111,18 +126,6 @@ header, h1 {
   }
   
 
-.container {
-    
-    max-width: 700px;
-    margin:auto;
-    padding: 20px;
-    border-radius:10px;
-   
-    color: white; /* Text color */
-    box-shadow: 0 0 20px rgb(84, 244, 255), /* Outer glow */
-                0 0 20px rgb(40, 110, 249), /* Secondary glow */
-                inset 0 0 10px rgb(154, 248, 248); /* Inner glow */
-}
 
 button {
     padding: 12px 20px; 
@@ -164,10 +167,11 @@ button:hover {
 
 
 img {
-    max-width: 100%;
+    max-width: 50%;
     height:auto;
     margin-top: 10px;
     border-radius: 10px;
     transition: opacity 0.5s ease-in-out;
 }
+
 

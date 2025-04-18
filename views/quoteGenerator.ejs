@@ -8,33 +8,97 @@
     
 
 </head>
-
+<div class="content">
+    <header>
+      <h1>Random Quote Generator</h1>
+      <h2>Welcome to your Daily Dose of Inspiration ✨</h2>
+    </header>
+      <nav class="navbar">
+        <div>
+          
+        
+         
+        </div>
+        <div>
+          <a href="/views/home.ejs" class="sign-in-button"> Create a Astral Space</a>
+          <a href="/views/wallpapers.ejs" class="wallpaper-button"> Free Wallpaper Download </a>
+          <a href="/views/quoteGenerator.ejs" class="wallpaper-button">Random Quote Generator</a>
+          <a href="/views/dashboard.ejs" class="sign-in-button">Your Dashboard</a>
+          <a href="/views/login.ejs" class="sign-in-button">Sign In</a>
+          <a href="/views/signup.ejs" class="sign-up-button">Sign Up</a>
+         
+          
+    
+        </div>
+      </nav>
+      <video autoplay muted loop id="bg-video">
+        <source src="/videos/MagicallyRelaxing/UniversalPull-2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+  
+<br><br>
+   
 <body>
     <div class = "container">
-        <h1> Random Quote Generator</h1>
-        <p> Add some text here to introduce the quote generator </p>
+        
+        <p>
+         Tap the button below. The quote waiting for you might just be the reminder, nudge, or spark you were destined to see today. 
+         Trust the moment... your words of wisdom are one click away. </p>
         <img id="quote-image" src="" alt="Quote Image"> <!-- id = 'quote allows js to change the image'-->
         <button onclick="generateImage()">New Quote</button> <!-- Calls the function generate Quote when the button is clicked -->
     </div>
    <!-- importing js logic -->
   <script>
 
-app.use(express.static(path.join(__dirname, 'public')));
+
 
     // array holding image file paths 
 
     const images = [
-        "/images/quoteImages/Quote1.png",
-        "/images/quoteImages/Quote2.png",
-        "/images/quoteImages/Quote3.png",
-        "/images/quoteImages/Quote4.png",
-        "/images/quoteImages/Quote5.png",
-        "/images/quoteImages/Quote6.png",
-        "/images/quoteImages/Quote7.png",
-        "/images/quoteImages/Quote8.png",
-        "/images/quoteImages/Quote9.png",
-        "/images/quoteImages/Quote10.png",
-        "/images/quoteImages/Quote11.png"
+        "/public/images/quoteImages/Quote1.png",
+        "/public/images/quoteImages/Quote2.png",
+        "/public/images/quoteImages/Quote3.png",
+        "/public/images/quoteImages/Quote4.png",
+        "/public/images/quoteImages/Quote5.png",
+        "/public/images/quoteImages/Quote6.png",
+        "/public/images/quoteImages/Quote7.png",
+        "/public/images/quoteImages/Quote8.png",
+        "/public/images/quoteImages/Quote9.png",
+        "/public/images/quoteImages/Quote10.png",
+        "/public/images/quoteImages/Quote11.png",
+        "/public/images/quoteImages/Quote12.png",
+        "/public/images/quoteImages/Quote13.png",
+        "/public/images/quoteImages/Quote14.png",
+        "/public/images/quoteImages/Quote15.png",
+        "/public/images/quoteImages/Quote16.png",
+        "/public/images/quoteImages/Quote17.png",
+        "/public/images/quoteImages/Quote18.png",
+        "/public/images/quoteImages/Quote19.png",
+        "/public/images/quoteImages/Quote20.png",
+        "/public/images/quoteImages/Quote21.png",
+        "/public/images/quoteImages/Quote22.png",
+        "/public/images/quoteImages/Quote23.png",
+        "/public/images/quoteImages/Quote24.png",
+        "/public/images/quoteImages/Quote25.png",
+        "/public/images/quoteImages/Quote26.png",
+        "/public/images/quoteImages/Quote27.png",
+        "/public/images/quoteImages/Quote28.png",
+        "/public/images/quoteImages/Quote29.png",
+        "/public/images/quoteImages/Quote30.png",
+        "/public/images/quoteImages/Quote31.png",
+        "/public/images/quoteImages/Quote32.png",
+        "/public/images/quoteImages/Quote33.png",
+        "/public/images/quoteImages/Quote34.png",
+        "/public/images/quoteImages/Quote35.png",
+        "/public/images/quoteImages/Quote36.png",
+        "/public/images/quoteImages/Quote37.png",
+        "/public/images/quoteImages/Quote38.png",
+        "/public/images/quoteImages/Quote39.png",
+        "/public/images/quoteImages/Quote40.png",
+        "/public/images/quoteImages/Quote41.png",
+        "/public/images/quoteImages/Quote42.png"
+       
+      
 ];
 
 
