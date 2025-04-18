@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote & Image Generator</title>
+    <link rel="stylesheet" href="/public/styles/quote.css">
+    
+
+</head>
+
+<body>
+    <div class = "container">
+        <h1> Random Quote Generator</h1>
+        <p> Add some text here to introduce the quote generator </p>
+        <img id="quote-image" src="" alt="Quote Image"> <!-- id = 'quote allows js to change the image'-->
+        <button onclick="generateImage()">New Quote</button> <!-- Calls the function generate Quote when the button is clicked -->
+    </div>
+   <!-- importing js logic -->
+  <script>
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+    // array holding image file paths 
+
+    const images = [
+        "/images/quoteImages/Quote1.png",
+        "/images/quoteImages/Quote2.png",
+        "/images/quoteImages/Quote3.png",
+        "/images/quoteImages/Quote4.png",
+        "/images/quoteImages/Quote5.png",
+        "/images/quoteImages/Quote6.png",
+        "/images/quoteImages/Quote7.png",
+        "/images/quoteImages/Quote8.png",
+        "/images/quoteImages/Quote9.png",
+        "/images/quoteImages/Quote10.png",
+        "/images/quoteImages/Quote11.png"
+];
+
+
+// pre load images for faster loading 
+images.forEach(src => {
+    const img = new Image(); // creates new image object
+    img.src = src; // Loads the image into memory
+});
+
+// Stops from getting the same image twice in a row
+let lastIndex = -1
+
+function generateImage() {
+    let randomIndex
+
+    // Keeps generating till it finds a image diffrent from the last
+    do {
+        randomIndex = Math.floor(Math.random() * images.length);
+    }while (randomIndex === lastIndex);
+
+    lastIndex = randomIndex; // update lastIndex to the new one 
+     
+    // sets the selected img into the <img> element in the HTML
+    document.getElementById("quote-image").src = images[randomIndex];
+    
+    // logs selected image
+    console.log("Selected image:", images[randomIndex]);
+}
+
+    // Runs when page loads  
+    window.onload = generateImage;
+
+
+//Math.random- Generates a random index between 0-41
+//document.getElementById("quote-image") finds the <img> element in the HTML
+//.src = images[randomIndex] sets its src attribute to a randomly selected image from the images array
+  </script>  
+
+</body>
+</html>

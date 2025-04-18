@@ -1,7 +1,5 @@
 body {
-    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+   
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -10,11 +8,12 @@ body {
     margin: 0;
   }
   
-  @keyframes gradientBG {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-  }
+   h1 {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 500px;
+   }
   
   form {
     background-color: rgba(255, 255, 255, 0.1);
@@ -25,10 +24,13 @@ body {
     color: white;
     width: 300px;
     text-align: center;
+    margin-top: 500px;
+    align-items: center;
   }
   
   form h2 {
     margin-bottom: 1rem;
+    text-align: center;
   }
   
   form input {

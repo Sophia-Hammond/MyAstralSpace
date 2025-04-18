@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
 // renders .ejs files with embedded JS in HTML
-app.set('veiw engine', 'ejs'); 
+app.set('view engine', 'ejs'); 
 
 // Session
 app.use(session({
@@ -50,9 +50,14 @@ app.get('/dashboard' , isAuthenticated, async (req, res) => {
     res.render('dashboard', { user });
 });
 
+app.get('/quoteGenerator', (req, res) => {
+    res.render('quoteGenerator'); // looks in views/quoteGenerator.ejs
+  });
+  
+
 
 // start server 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT`));
+app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT}`));
 
 
