@@ -24,3 +24,260 @@
 
     <div id="results" class="results-container"></div>
   </div>
+
+
+  <script>
+    const affirmation = {
+        morning: [
+            'I woke up today feeling refreshed, energized, and ready to shine!', 
+
+            'Today is a gift, and i choose to enjoy it fully.',
+
+            'I am grateful for this new day and all the opportunities it brings.',
+
+            'I am in control of my thoughts, emotions, and choices.',
+
+            'My mind is clear, focused, and open to positivity.',
+
+            'I radiate confidence, peace, and self-belief.',
+
+            'I trust that everything is unfolding for my highest good.',
+
+            'I am aligned with my purpose and passion.',
+
+            'I attract love, success, and abundance effortlessly.',
+
+            'I am worthy of happiness, health, and prosperity.',
+
+            'My body is strong, my mind is sharp, and my soul is glowing.',
+
+            'I choose to see the good in myself and others.',
+
+            'I am proud of who I am becoming.',
+
+            'I am calm, centered, and grounded.',
+
+            'I trust myself to make wise decisions today.', 
+            
+            'I am creating a life I love with every step I take.',
+
+            'My potential is limitless and I am unstoppable.',
+
+            'I welcome this day with an open heart and a peaceful mind.',
+
+            'I am kind to myself and speak to myself with love.',
+
+            'I am surrounded by positive energy and good vibes.',
+
+            'I believe in my goals, my dreams, and my journey.',
+
+            'I choose joy, peace, and love today.',
+
+            'I am grateful for the little things that make life beautiful.',
+
+            'Every breath I take fills me with peace and clarity.',
+
+            'I have everything I need within me.',
+
+            'I am becoming the best version of myself every day.',
+
+            'I allow myself to grow, learn, and heal.',
+
+            'I am open to miracles and unexpected blessings.',
+
+            'I let go of what I can’t control and embrace peace.',
+
+            ' I am safe, supported, and loved.',
+
+            'I rise with strength, courage, and self-compassion.',
+
+            'My life is a reflection of the love and light within me.',
+
+            'I am proud of how far I’ve come and excited for what’s ahead.',
+
+            'I welcome new beginnings with faith and excitement.',
+
+            'I nourish my mind, body, and soul with kindness.',
+        
+            'I handle challenges with grace and resilience.',
+
+            'I make today count and move forward with intention.',
+
+            'I forgive myself for yesterday and celebrate who I am today.',
+
+            'I deserve a life filled with love, peace, and joy.',
+
+            'I am ready to shine and share my light with the world.'
+
+        ],
+
+        Success: [
+            'I believe in my ability to succeed and thrive.',
+
+            'I take inspired action toward my goals every day.',
+
+            'I am focused, driven, and determined to win.',
+
+            'I attract opportunities that align with my purpose.',
+
+            'I trust the process and know success is on its way.',
+
+            'I am capable of achieving anything I set my mind to.',
+
+            'I am disciplined, dedicated, and unstoppable.',
+
+            'I learn from every experience and grow stronger.',
+
+            'I am open to receiving abundance and success.',
+
+            'I stay motivated and consistent in my efforts.',
+
+            'I turn obstacles into opportunities for growth.',
+
+            'I celebrate every win, big or small.',
+
+            'I am confident in my unique talents and strengths.',
+
+            'I create a life of purpose, passion, and prosperity.',
+
+            'I surround myself with success-minded people.',
+
+            'I speak success into existence every single day.',
+
+            'I am proud of the progress I make daily.',
+
+            'I use my time wisely and efficiently.',
+
+            'I stay calm, confident, and collected under pressure.',
+
+            'I visualize my goals and take action to achieve them.',
+
+            'I am worthy of all the success that flows to me.',
+
+            'I align my actions with my highest vision.',
+
+            'I attract wealth, growth, and greatness.',
+
+            'I push through fear and embrace the unknown.',
+
+            'I welcome change and use it to my advantage.',
+
+            'I remain focused on my path, not distractions.',
+
+            'I am always improving and evolving.',
+
+            'I am a magnet for success and opportunity.',
+
+            'I rise every time I fall, stronger than before.',
+
+            'I trust my journey and believe in the outcome.',
+
+            'I stay committed to my goals, no matter what.',
+
+            'I radiate confidence, ambition, and drive.',
+
+            'I turn dreams into plans and plans into action.',
+
+            'I am creating a legacy of success and impact.',
+
+            'I am fearless in the face of new challenges.',
+
+            'I have everything I need to succeed within me.',
+
+            'I invest in myself and my future.',
+
+            'I believe that success is my natural state.',
+
+            'I choose progress over perfection every day.',
+
+            'I show up for my dreams with passion and purpose.',
+
+      ],
+         business: [
+            'I am building a business that aligns with my passion and purpose.',
+
+             'I trust in my vision and take steps daily to grow my business.',
+
+             'I attract loyal customers who value what I offer.',
+
+            'I am confident in the value my business brings to the world.',
+
+            'I create profitable opportunities with clarity and focus.',
+
+            'I am a successful, impactful, and respected business owner.',
+
+            'I lead my business with integrity, creativity, and heart.',
+
+            'I welcome abundance and financial prosperity into my business.',
+
+            'I stay open to learning, evolving, and adapting.',
+
+            'I make smart decisions that support my long-term success.',
+
+            'I am grateful for every client, sale, and opportunity.',
+
+            'I create systems that support sustainable growth.',
+
+            'I am a magnet for collaboration, success, and expansion.',
+
+            'I balance ambition with rest to stay inspired and energized.',
+
+            'I offer value, and value flows back to me in abundance.',
+
+            'I attract opportunities that help my business thrive.',
+
+            'I believe in my brand and everything it stands for.',
+
+            'I overcome challenges with strength and creativity.',
+
+            'I am building a business that supports my dream life.',
+
+            'I am worthy of massive success and financial freedom.',
+
+            'I trust that every setback is a setup for a greater comeback.',
+
+            'I am surrounded by a supportive, driven community.',
+
+            'I take aligned action and trust the process.',
+
+            'I invest wisely in tools, knowledge, and growth.',
+
+            'I show up as the CEO my business needs.',
+
+            'I stay connected to my “why” and lead with intention.',
+
+            'I am confident in charging what my work is worth.',
+
+            'I create impact and income with ease and authenticity.',
+
+            'I attract aligned clients who are excited to work with me.',
+
+            'I grow my business at the perfect pace for me.',
+
+            'I am clear on my goals and take consistent action toward them.',
+
+            'I allow my business to be joyful, fulfilling, and successful.',
+
+            'I embrace innovation and stay ahead of the curve.',
+
+            'I celebrate every milestone and lesson.',
+
+            'I am a powerful leader who inspires others.',
+
+            'I am proud of the business I’m building every day.',
+
+            'I believe in my ability to scale and succeed.',
+
+            'I am aligned with abundance in all forms.',
+
+            'I trust the timing and flow of my entrepreneurial journey.',
+
+            'I am creating a business that makes a difference.',
+         ]
+          
+
+
+    }
+  </script>
+</body>
+</html>
