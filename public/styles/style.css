@@ -22,6 +22,8 @@ body {
   font-size: medium;
   margin-top: 30px;
   margin-left: 40px;
+ 
+
 
  
 
@@ -42,20 +44,7 @@ body {
   box-shadow: 0 2px 10px rgba(0, 255, 255, 0.4);
 }
 
-.footer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 10;
-  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.4);
-}
+
 
 
 /* Navbar items */
@@ -73,8 +62,10 @@ body {
 }
 h2 {
   font-size: medium;
-  background-color: rgba(14, 22, 63, 0.4);
+  background-color: rgba(245, 246, 251, 0.6);
   padding: 20px;
+  text-align: center;
+  color: #000000;
 }
 
 h1 {
@@ -155,6 +146,7 @@ h1 {
   border: none;
   border-radius: 8px 0 0 8px;
   width: 300px;
+ 
 }
 
 #noteForm button {
@@ -165,6 +157,7 @@ h1 {
   color: rgb(13, 0, 0);
   font-weight: bold;
   cursor: pointer;
+ 
 }
 
 

@@ -12,8 +12,11 @@ header, h1 {
     font-size:xx-large;
     justify-content: space-between;
     align-items: center;
-    margin-top: 80px;
+    
     text-align: center;
+  }
+  h2 {
+    margin-top: 65px;
   }
   
 
@@ -69,8 +72,7 @@ header, h1 {
   
   
   /* Glowing buttons */
-  .sign-in-button,
-  .sign-up-button,
+  
   .logout-button {
     padding: 0.5rem 1rem;
     border: 2px solid #0ce2ff;
@@ -81,6 +83,12 @@ header, h1 {
     transition: all 0.3s ease;
     box-shadow: 0 0 10px #0eb6fe;
     margin-right: 50px;
+  }
+
+  .sign-in-button,
+  .sign-up-button {
+    margin-left: 500px;
+    
   }
   
   .sign-in-button:hover,
@@ -132,9 +140,11 @@ button {
     font-size: 18px; 
     font-weight: bold;
     cursor: pointer;
-    margin-top: 15px;
+    align-items: center;
+  
     border-radius: 30px; /* Rounding corners of button */
     border: none; /* Removes default border */
+   
     
     /* Glowing outline */
     background-color: #1e1e1e; 
@@ -167,11 +177,28 @@ button:hover {
 
 
 img {
-    max-width: 50%;
+    max-width: 95%;
     height:auto;
-    margin-top: 10px;
+    margin-bottom: 20px;
     border-radius: 10px;
     transition: opacity 0.5s ease-in-out;
+    align-items: center;
 }
+
+
+
+.container {
+    
+    max-width: 700px;
+    margin:auto;
+    padding: 20px;
+    border-radius:10px;
+    background-color: rgba(9, 7, 7, 0.7);
+    color: rgb(255, 254, 254); /* Text color */
+    box-shadow: 0 0 20px rgb(84, 244, 255), /* Outer glow */
+                0 0 20px rgb(40, 110, 249), /* Secondary glow */
+                inset 0 0 10px rgb(154, 248, 248); /* Inner glow */
+}
+
 
 
