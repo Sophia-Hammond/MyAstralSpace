@@ -47,16 +47,6 @@ body {
     text-align: center;
   }
   
-  header h1 {
-    margin: 0;
-    font-size: 1.5rem;
-    text-align: center;
-    font-size: xx-large;
-  
-  }
-  
-  
-  
   /* Navbar */
   .navbar {
     position: fixed;
