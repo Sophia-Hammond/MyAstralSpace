@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Affirmations</title>
+  <link rel="stylesheet" href="/css/affirmation.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Your Daily Affirmations</h1>
+    <p>
+      Daily affirmations are powerful tools for reprogramming your subconscious mind.
+       Studies show they can reduce stress, increase self-belief, and boost motivation.
+        Choose a category to receive your affirmations:
+    </p>
+
+    <div class="button-container">
+      <button onclick="showAffirmations('morning')">🌞 Morning Affirmations</button>
+      <button onclick="showAffirmations('selfLove')">💖 Self-love & Confidence</button>
+      <button onclick="showAffirmations('success')">💰 Success & Abundance</button>
+      <button onclick="showAffirmations('business')">📈 Successful Business</button>
+      <button onclick="showAffirmations('astral')">🌌 Astral Projection & Lucid Dreaming</button>
+    </div>
+
+    <div id="results" class="results-container"></div>
+  </div>
