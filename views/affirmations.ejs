@@ -3,23 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Daily Affirmations</title>
-  <link rel="stylesheet" href="/css/affirmation.css">
+  <link rel="stylesheet" href="/public/styles/affirmations.css">
 </head>
 <body>
+
+    <!-- Video behind everything -->
+  <video autoplay muted loop id="bg-video">
+    <source src="/videos/MagicallyRelaxing/FullMoonBackgroundVideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
+  <nav class="navbar">
+        
+    <div>
+      <a href="/views/home.ejs" class="sign-in-button"> Create a Astral Space</a>
+      <a href="/views/wallpapers.ejs" class="wallpaper-button"> Free Wallpaper Download </a>
+      <a href="/views/quoteGenerator.ejs" class="wallpaper-button">Random Quote Generator</a>
+      <a href="/views/dashboard.ejs" class="sign-in-button">Your Dashboard</a>
+      <a href="/views/login.ejs" class="sign-in-button">Sign In</a>
+      <a href="/views/signup.ejs" class="sign-up-button">Sign Up</a>
+</div>
+</nav>
+
+<div class="content">
+<header>
+<h1>Welcome to Your Daily Affirmations</h1>
+</header>
+  
   <div class="container">
-    <h1>Welcome to Your Daily Affirmations</h1>
+  
     <p>
       Daily affirmations are powerful tools for reprogramming your subconscious mind.
        Studies show they can reduce stress, increase self-belief, and boost motivation.
         Choose a category to receive your affirmations:
     </p>
 
-    <div class="button-container">
-      <button onclick="showAffirmations('morning')">🌞 Morning Affirmations</button>
-      <button onclick="showAffirmations('selfLove')">💖 Self-love & Confidence</button>
-      <button onclick="showAffirmations('success')">💰 Success & Abundance</button>
-      <button onclick="showAffirmations('business')">📈 Successful Business</button>
-      <button onclick="showAffirmations('astral')">🌌 Astral Projection & Lucid Dreaming</button>
+    <div class="Affirmation-button-container">
+      <button class="affirmation-btn" onclick="showAffirmations('morning')">🌞 Morning Affirmations</button>
+      <button class="affirmation-btn" onclick="showAffirmations('selfLove')">💖 Self-love & Confidence</button>
+      <button class="affirmation-btn" onclick="showAffirmations('success')">💰 Success & Abundance</button>
+      <button class="affirmation-btn" onclick="showAffirmations('business')">📈 Successful Business</button>
+      <button class="affirmation-btn" onclick="showAffirmations('astral')">🌌 Astral Projection & Lucid Dreaming</button>
     </div>
 
     <div id="results" class="results-container"></div>
