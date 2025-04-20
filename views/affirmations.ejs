@@ -451,7 +451,12 @@
 
             const selected = chosen.sort(() => 0.5 - Math.random()).slice(0, 5);
 
-            const resultsContainer = document.getElementById()
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = ` 
+            <h3> Your Affirmations:</h3>
+            <ul>
+                ${selected.map(aff => `<li>${aff}</li>`).join('')}
+                </ul>`;
            }
   </script>
 </body>
