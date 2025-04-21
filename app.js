@@ -53,6 +53,10 @@ app.get('/dashboard' , isAuthenticated, async (req, res) => {
 app.get('/quoteGenerator', (req, res) => {
     res.render('quoteGenerator'); // looks in views/quoteGenerator.ejs
   });
+
+  app.get('/affirmations', (req, res) => {
+    res.render('affirmations');
+  });
   
 
 
