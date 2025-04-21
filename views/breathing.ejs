@@ -18,3 +18,31 @@
     <div class="circle"></div>
     <h1 id="breath-text">Breathe In</h1>
   </div>
+
+  <script>
+    const BreathText = document.getElementById('breath-text');
+    const circle = document.querySelector('.circle');
+
+    const totalCycle =7500; // full cycle 7.5 secounds
+
+    function breathAnimation() {
+        breathText.innerText = 'Breathe In';
+        circle.className = 'circle grow';
+
+        setTimeout(() => {
+            breathText.innerText = 'Hold';
+            cirlce.className = 'circle hold';
+
+        setTimeout(() => {
+            breathText.innerText = 'Breathe Out';
+            circle.className = 'circle shrink';
+        }, 1500); // hold 1.5s
+
+        }, 3000); // inhale 3s
+    }
+
+    setInterval(breathAnimation, totalCycle);
+
+  </script>
+  </body>
+</html>
