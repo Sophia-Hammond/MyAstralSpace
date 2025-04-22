@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  <!-- Optional background video -->
+ 
  
 
   <!-- Main Container -->
@@ -16,9 +16,20 @@
     <h1 id="breath-text">Breathe In</h1>
   </div>
 
+  <div class="sound-controls">
+    <button id="toggleMusic" class="sound-btn">▶️ Start Music</button>
+    <button id="switchSound" class="sound-btn">🔀 Switch Sound</button>
+  </div>
+  
+  <audio id="calmAudio" loop></audio>
+  
+
   <script>
     const breathText = document.getElementById('breath-text');
     const circle = document.querySelector('.circle');
+    const calmAudio = document.getElementById('calmAudio');
+    const toggleMusic = document.getElementById('toggleMusic');
+    const switchSound = document.getElementById('switchSound');
 
     const totalCycle =7500; // full cycle 7.5 secounds
 
@@ -64,10 +75,10 @@
     toggleMusic.addEventListener('click', () => {
         if (isPlaying) {
             calmAudio.pause();
-            toggleMusic.textContent = 'Start Music';
+            toggleMusic.textContent = '▶️Start Music';
         } else {
             calmAudio.play();
-            toggleMusic.textContent = 'Stop Music';
+            toggleMusic.textContent = '⏸️ Stop Music';
         }
         isPlaying = !isPlaying;
     });
@@ -83,6 +94,11 @@
   });
 
   //  Prevent autoplay errors
+
+  document.body.addEventListener('click', () => {
+  calmAudio.play().then(() => calmAudio.pause()).catch(() => {});
+}, { once: true });
+
   window.addEventListener('click', () => {
     calmAudio.play().then(() => {
       calmAudio.pause();
