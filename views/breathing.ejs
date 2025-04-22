@@ -42,6 +42,54 @@
 
     breathAnimation(); //starts animation when page loads 
 
+    //music logic 
+    const soundList = [
+    "/public/audio/sound1.mp3",
+    "/public/audio/sound2.mp3",
+    "/public/audio/sound3.mp3",
+    "/public/audio/sound4.mp3",
+    "/public/audio/sound5.mp3",
+    "/public/audio/sound6.mp3",
+    "/public/audio/sound7.mp3",
+    "/public/audio/sound8.mp3",
+    "/public/audio/sound9.mp3"
+    ];
+
+    let currentIndex = Math.floor(Math.random() * soundList.length);
+    calmAudio.src = soundList[currentIndex];
+    let isPlaying = false;
+
+
+   // start/stop button 
+    toggleMusic.addEventListener('click', () => {
+        if (isPlaying) {
+            calmAudio.pause();
+            toggleMusic.textContent = 'Start Music';
+        } else {
+            calmAudio.play();
+            toggleMusic.textContent = 'Stop Music';
+        }
+        isPlaying = !isPlaying;
+    });
+
+    //switch sound
+    switchSound.addEventListener("click", () => {
+    const previousIndex = currentIndex;
+    while (currentIndex === previousIndex) {
+      currentIndex = Math.floor(Math.random() * soundList.length);
+    }
+    calmAudio.src = soundList[currentIndex];
+    if (isPlaying) calmAudio.play();
+  });
+
+  //  Prevent autoplay errors
+  window.addEventListener('click', () => {
+    calmAudio.play().then(() => {
+      calmAudio.pause();
+    }).catch(() => {});
+  });
+
+
   </script>
   </body>
 </html>
