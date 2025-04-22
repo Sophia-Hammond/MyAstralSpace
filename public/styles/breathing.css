@@ -11,15 +11,14 @@ body {
     overflow: hidden;
   }
 
-  header, h1 {
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 1rem 2rem;
-    font-size:xx-large;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 80px;
-    text-align: center;
-  }
+ header, h2 {
+   margin-top: 5px;
+   margin-bottom: 300px; 
+   text-align: center;
+   align-items: center;
+   font-size: xx-large;
+   justify-content: space-between;
+ }
 
     
   /* Navbar */
@@ -149,6 +148,7 @@ body {
   .breathing-container {
     text-align: center;
     z-index: 10;
+    align-items: center;
   }
   
   .breath-text h1 {
@@ -156,6 +156,7 @@ body {
     margin-top: 40px;
     color: #c0f5ff;
     text-shadow: 0 0 20px #79f0ff;
+    text-align: center;
   }
   
   .circle {
@@ -166,6 +167,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 30px #19f1ed;
     transition: all 3s ease-in-out;
+    align-items: center;
   }
   
   .circle.grow {

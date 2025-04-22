@@ -46,7 +46,8 @@ body {
 
   .sign-in-button,
   .sign-up-button,
-  .logout-button {
+  .logout-button,
+  .wallpaper-button {
     padding: 0.5rem 1rem;
     border: 2px solid #0ce2ff;
     border-radius: 8px;
@@ -61,6 +62,7 @@ body {
   .sign-in-button:hover,
   .sign-up-button:hover,
   .logout-button:hover,
+  .wallpaper-button:hover,
   .saved-spaces-button {
     background-color: #0bcadb;
     color: #000000;
