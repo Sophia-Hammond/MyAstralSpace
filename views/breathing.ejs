@@ -8,10 +8,7 @@
 <body>
 
   <!-- Optional background video -->
-  <video autoplay muted loop id="bg-video">
-    <source src="/Videos/MagicallyRelaxing/EthericSimulation.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+ 
 
   <!-- Main Container -->
   <div class="breathing-container">
@@ -20,7 +17,7 @@
   </div>
 
   <script>
-    const BreathText = document.getElementById('breath-text');
+    const breathText = document.getElementById('breath-text');
     const circle = document.querySelector('.circle');
 
     const totalCycle =7500; // full cycle 7.5 secounds
@@ -31,7 +28,7 @@
 
         setTimeout(() => {
             breathText.innerText = 'Hold';
-            cirlce.className = 'circle hold';
+            circle.className = 'circle hold';
 
         setTimeout(() => {
             breathText.innerText = 'Breathe Out';
@@ -42,6 +39,8 @@
     }
 
     setInterval(breathAnimation, totalCycle);
+
+    breathAnimation(); //starts animation when page loads 
 
   </script>
   </body>
