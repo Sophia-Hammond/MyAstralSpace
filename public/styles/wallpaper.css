@@ -1,7 +1,8 @@
 body {
     height: 100%;
-    margin: 0;
+    margin: 50px;
     padding: 0;
+    text-align: center;
     font-family: 'Segoe UI', sans-serif;
     color: rgb(255, 255, 255);
   }
@@ -71,7 +72,7 @@ body {
     margin-left: 10px;
     border: none;
     border-radius:15px;
-    background-color: rgba(18, 239, 246, 0.2);
+    background-color: none;
     color: white;
     cursor: pointer;
     text-decoration: none;
@@ -84,8 +85,7 @@ body {
   }
   
   /* Glowing buttons */
-  .sign-in-button,
-  .sign-up-button,
+  
   .logout-button {
     padding: 0.5rem 1rem;
     border: 2px solid #0ce2ff;
@@ -96,6 +96,11 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 0 10px #0eb6fe;
     margin-right: 50px;
+  }
+  .sign-in-button,
+  .sign-up-button {
+    margin-left: 500px;
+    
   }
   
   .sign-in-button:hover,
