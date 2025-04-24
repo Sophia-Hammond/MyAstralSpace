@@ -2,23 +2,28 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', sans-serif;
-    display: flex;
+   
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: #0f0f23;
     color: white;
-    overflow: hidden;
+ 
   }
 
  header, h2 {
-   margin-top: 5px;
-   margin-bottom: 300px; 
+   margin-top: 100px;
+   margin-bottom: 50px;
    text-align: center;
    align-items: center;
    font-size: xx-large;
    justify-content: space-between;
  }
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
 
     
   /* Navbar */
@@ -148,10 +153,15 @@ body {
   }
   
   .breathing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     z-index: 10;
-    align-items: center;
+    position: relative;
   }
+  
   
   .breath-text h1 {
     font-size: 2rem;
@@ -162,9 +172,10 @@ body {
   }
   
   .circle {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     margin: 0 auto;
+    margin-top: 130px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 30px #19f1ed;
