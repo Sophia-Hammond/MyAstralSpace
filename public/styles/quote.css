@@ -1,6 +1,6 @@
 body {
     background-color: rgb(27, 21, 52);
-    font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
     text-align: center;
     margin: 50px;
     color: white;
@@ -104,8 +104,8 @@ header, h1 {
   .sign-up-button:hover,
   .logout-button:hover,
   .saved-spaces-button {
-    background-color: #0bcadb;
-    color: #000000;
+    background-color: none;
+    color: #ffffff;
     box-shadow: 0 0 20px #0dfafe, 0 0 40px #1efbc4;
   }
 
@@ -175,7 +175,7 @@ button:hover {
                 0 0 25px rgba(0, 255, 255, 0.8), 
                 inset 0 0 10px rgba(0, 255, 255, 1);
     transform: scale(1.05); /* Slightly enlarge on hover */
-}//
+}
 
 /* Floating animation */
 @keyframes floatUpDown {

@@ -33,12 +33,13 @@ body {
   
  
   .navbar select,
-  .navbar button { 
+  .navbar button,
+  .navbar a { 
     padding: 15px 1rem;
     margin-left: 10px;
     border: none;
     border-radius:15px;
-    background-color: rgba(18, 239, 246, 0.2);
+    background-color: none;
     color: white;
     cursor: pointer;
     text-decoration: none;
