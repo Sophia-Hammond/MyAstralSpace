@@ -107,8 +107,8 @@ body {
   .sign-up-button:hover,
   .logout-button:hover,
   .saved-spaces-button {
-    background-color: #0bcadb;
-    color: #000000;
+    background-color:none;
+    color: #ffffff;
     box-shadow: 0 0 20px #0dfafe, 0 0 40px #1efbc4;
   }
   

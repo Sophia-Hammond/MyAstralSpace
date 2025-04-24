@@ -61,6 +61,9 @@ app.get('/quoteGenerator', (req, res) => {
   app.get('/breathing', (req, res) => {
     res.render('breathing');
   });
+
+ 
+  
   
   
 

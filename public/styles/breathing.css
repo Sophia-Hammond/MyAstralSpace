@@ -45,15 +45,14 @@ body {
     margin-left: 10px;
     border: none;
     border-radius:15px;
-    background-color: rgba(18, 239, 246, 0.2);
+    background-color: none;
     color: white;
     cursor: pointer;
     text-decoration: none;
   }
 
   /* Glowing buttons */
-  .sign-in-button,
-  .sign-up-button,
+  
   .logout-button {
     padding: 0.5rem 1rem;
     border: 2px solid #0ce2ff;
@@ -66,12 +65,15 @@ body {
     margin-right: 50px;
   }
   
+
+ 
+
   .sign-in-button:hover,
   .sign-up-button:hover,
   .logout-button:hover,
   .saved-spaces-button {
-    background-color: #0bcadb;
-    color: #000000;
+    background-color: none;
+    color: #ffffff;
     box-shadow: 0 0 20px #0dfafe, 0 0 40px #1efbc4;
   }
   
