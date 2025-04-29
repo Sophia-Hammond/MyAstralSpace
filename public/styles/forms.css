@@ -81,7 +81,7 @@ body, html {
   .logout-button {
     padding: 0.5rem 1rem;
    
-    background-color: rgba(255, 255, 255, 0.1);
+   
     color: #19f1ed;
     font-weight: bold;
     transition: all 0.3s ease;
@@ -154,6 +154,7 @@ body, html {
   h2 {
     background-color: #0bcadb;
     padding: 20px;
+   margin-top: 0;
   }
   form h2 {
     margin-bottom: 1rem;
