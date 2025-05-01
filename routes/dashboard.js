@@ -1,9 +1,11 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const authMiddleware = require('../middleware/auth')
+const authMiddleware = require("../middleware/auth");
 
-router.arguments('/dashboard', authMiddleware, (req, res) => {
-    res.render('dashboard');
+// Protected route for dashboard
+router.get("/dashboard", authMiddleware, (req, res) => {
+  const user = req.session.userId;
+  res.render("dashboard", { user });
 });
 
 module.exports = router;

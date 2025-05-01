@@ -215,7 +215,21 @@
       <div id="noteBoard"></div>
 
       <audio id="submitSound" src="/sounds/pop.mp3" preload="auto"></audio>
-      <script src="/scripts/floatingNotes.js" defer></script>
+    
+        <%- include('partials/header') %>
+
+<h1>Wallpaper Gallery</h1>
+
+<% if (!user) { %>
+  <div class="locked-message">
+    <p>🔒 Make a free account now to access unlimited wallpapers!</p>
+  </div>
+<% } else { %>
+  <!-- Show unlocked wallpaper content -->
+<% } %>
+
+<%- include('partials/footer') %>
+
 
     </main>
   </div>
