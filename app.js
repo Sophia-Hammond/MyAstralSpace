@@ -9,6 +9,9 @@ const authRoutes = require("./routes/auth");
 const boardRoutes = require("./routes/boards");
 const isAuthenticated = require('./middleware/auth');
 
+const wallpaperRoutes = require('./routes/wallpaper');
+const dashboardRoutes = require('./routes/dashboard');
+
 dotenv.config();
 
 const app = express();
@@ -22,6 +25,7 @@ mongoose.connect(process.env.MONGO_URI)
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
+
 
 // renders .ejs files with embedded JS in HTML
 app.set('view engine', 'ejs'); 
@@ -39,6 +43,9 @@ app.use(session({
 app.use('/', require('./routes/main'));
 app.use("/auth", authRoutes); // authentication route
 app.use("/boards", boardRoutes); // boards routes
+app.use(wallpaperRoutes);
+app.use(dashboardRoutes);
+
 // Home route
 app.get("/", (req, res) => {
     res.send("Welcome to MyAstralSpace");
