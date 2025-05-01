@@ -1,12 +1,11 @@
-module.exports = function requireAuth(req, res, next) {
-    if (!req.session.userId) {
-      return res.status(401).json({ error: "Unauthorized" });
-    
-    next();
-  } else {
-    res.redirect('/login');
-  }
-}
+// middleware/auth.js
 
-module.exports = isAuthenticated;
+module.exports = (req, res, next) => {
+  if (!req.session.userId) {
+    // User is not logged in, redirect to login page
+    return res.redirect('/login');
+  }
+  next(); // User is logged in, continue to the requested route
+};
+
   
