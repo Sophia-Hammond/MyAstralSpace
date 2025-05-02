@@ -17,9 +17,12 @@ dotenv.config();
 const app = express();
 
 // connecting to mongoDB
-mongoose.connect(process.env.MONGO_URI)
-.then(() => console.log('connected to MongoDB'))
-.catch((err) => console.error('Mongo Error:', err));
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log(" MongoDB connected"))
+.catch(err => console.error(" MongoDB connection error:", err));
 
 //middleware
 app.use(express.static(path.join(__dirname, 'public')));
